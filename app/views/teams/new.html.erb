@@ -1,0 +1,13 @@
+<div>
+  <h1>新規参加チーム登録</h1>
+  <%= form_for @team do |f| %>
+    <div>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div>
+      <%= f.submit %>
+    </div>
+  <% end %>
+  <%= link_to '参加チーム一覧へ戻る', teams_url %>
+</div>

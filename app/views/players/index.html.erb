@@ -1,0 +1,9 @@
+<div>
+  <h1>選手一覧</h1>
+  <ul>
+    <% @players.each do |player| %>
+      <li><%= link_to player.name, team_player_url(player.team_id, player.id) %></li>
+    <% end %>
+  </ul>
+  <%= link_to "参加チーム一覧", teams_url %>
+</div>
