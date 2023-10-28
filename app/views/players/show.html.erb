@@ -1,0 +1,6 @@
+<div>
+  <h1>選手情報</h1>
+  <p>選手名: <%= @player.name %></p>
+  <p>所属チーム: <%= link_to @player.team.name, team_url(@player.team_id) %></p>
+  <%= link_to "選手一覧", players_url %>
+</div>

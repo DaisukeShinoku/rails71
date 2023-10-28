@@ -1,0 +1,14 @@
+<div>
+  <h1><%= @team.name%>への選手登録</h1>
+  <%= form_with(model:[@team, @player], local: true) do |f| %>
+    <div>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <%= f.hidden_field :team_id, :value => @team.id %>
+    </div>
+    <div>
+      <%= f.submit %>
+    </div>
+  <% end %>
+  <%= link_to "#{@team.name}のページに戻る", team_url(@team) %>
+</div>

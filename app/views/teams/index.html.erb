@@ -1,0 +1,10 @@
+<div>
+  <h1>参加チーム一覧</h1>
+  <ul>
+    <% @teams.each do |team| %>
+      <li><%= link_to team.name, team_url(team) %></li>
+    <% end %>
+  </ul>
+  <%= link_to '参加チーム新規登録', new_team_url %> |
+  <%= link_to '選手一覧', players_url %>
+</div>
