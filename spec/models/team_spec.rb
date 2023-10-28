@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe Team, type: :model do
-  describe "validations" do
+  describe "validationのテスト" do
     let(:team) { build(:team, name:) }
     subject { team.valid? }
 
