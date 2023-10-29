@@ -1,10 +1,14 @@
 <div>
   <h1><%= @team.name %>の選手一覧</h1>
-  <ul>
-    <% @team.players.each do |player| %>
-      <li><%= link_to player.name, team_player_url(@team, player) %></li>
-    <% end %>
-  </ul>
+  <% if @team.players.present? %>
+    <ul>
+      <% @team.players.each do |player| %>
+        <li><%= link_to player.name, team_player_url(@team, player) %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <div>選手が登録されていません。</div>
+  <% end %>
   <%= link_to "新規選手登録", new_team_player_url(@team) %> |
   <%= link_to "別チームの情報を見る", teams_url %>
 </div>
